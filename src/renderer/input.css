@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[url(../../assets/bg.png)];
+    @apply bg-repeat;
+  }
+  .todo-container {
+    @apply container;
+    @apply mx-auto;
+  }
+  .header {
+    @apply pb-4;
+    @apply font-semibold;
+    @apply text-gray-900;
+    @apply dark:text-white;
+    @apply bg-white;
+  }
+  .todo-list {
+    @apply list-none;
+    @apply text-sm;
+    @apply font-medium;
+    @apply text-gray-900;
+    @apply bg-white;
+    @apply border;
+    @apply border-gray-200;
+    @apply rounded-lg;
+    @apply dark:bg-gray-700;
+    @apply dark:border-gray-600;
+    @apply dark:text-white;
+  }
+  .action-item {
+    @apply w-full;
+    @apply border-b;
+    @apply border-gray-200;
+    @apply rounded-t-lg;
+    @apply dark:border-gray-600;
+  }
+  .completion-check {
+    @apply w-4;
+    @apply h-4;
+    @apply text-blue-600;
+    @apply bg-gray-100;
+    @apply border-gray-300;
+    @apply rounded;
+    @apply focus:ring-blue-500;
+    @apply dark:focus:ring-blue-600;
+    @apply dark:ring-offset-gray-700;
+    @apply dark:focus:ring-offset-gray-700;
+    @apply focus:ring-2;
+    @apply dark:bg-gray-600;
+    @apply dark:border-gray-500;
+  }
+  .action {
+    @apply w-full;
+    @apply py-3;
+    @apply ms-2;
+    @apply text-sm;
+    @apply font-medium;
+    @apply text-gray-900;
+    @apply dark:text-gray-300;
+  }
+  .done {
+    @apply line-through;
+  }
+  .input {
+    @apply shadow;
+    @apply appearance-none;
+    @apply border;
+    @apply rounded;
+    @apply w-full;
+    @apply py-2;
+    @apply px-3;
+    @apply text-gray-700;
+    @apply leading-tight;
+    @apply focus:outline-none;
+  }
+  button {
+    @apply text-white;
+    @apply font-bold;
+    @apply py-2;
+    @apply px-4;
+    @apply border-b-4;
+    @apply rounded;
+  }
+  .add-button {
+    @apply bg-blue-500;
+    @apply hover:bg-blue-400;
+    @apply border-blue-700;
+    @apply hover:border-blue-500;
+  }
+  .delete-button {
+    @apply bg-red-500;
+    @apply hover:bg-red-400;
+    @apply border-red-700;
+    @apply hover:border-red-500;
+  }
+}
