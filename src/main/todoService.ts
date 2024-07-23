@@ -23,7 +23,7 @@ export const getTodos = async (path: string): Promise<string> => {
 };
 
 export const createTodo = async (path: string, action: string) => {
-  const newTodos = [...cache, {id: (cache.length + 1), action, isCompleted: false}].sort((todo1, todo2) => todo1.id - todo2.id);
+  const newTodos = [...cache, {id: new Date().getTime(), action, isCompleted: false}].sort((todo1, todo2) => todo1.id - todo2.id);
   cache = [...newTodos];
   const newTodosStr = JSON.stringify(newTodos);
   await writeTodos(path, newTodosStr);
